@@ -1,0 +1,68 @@
+.cascading-right {
+    background: hsla(0, 0%, 100%, 0.55);
+    backdrop-filter: blur(40px);
+  }
+
+  @media (max-width: 991.98px) {
+    .cascading-right {
+      margin-right: 0;
+    }
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: linear-gradient(to right, #b92b27, #1565c0)
+}
+.form-control{
+    margin: 0;
+}
+
+
+
+
+
+/*.container{
+    border: 5px solid red;
+    text-align: center;
+    background-color: #FFF0C9;
+    border-radius: 20px;
+    
+
+}
+.table{
+    border: 2px solid yellow;
+    text-align: center;
+    margin: 0 auto;
+}
+h2{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: aquamarine;
+    text-align: center;
+}
+th{
+    background-color: aqua;
+    text-align: center; 
+}
+
+.form-check-input{
+    text-align: center; 
+
+}
+p{
+    font-size: large;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.form-label{
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.form-check-label{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}*/
