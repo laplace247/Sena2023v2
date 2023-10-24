@@ -92,10 +92,7 @@ Route::delete('cursos/{idCurso}', [CursoController::class, 'destroy'])->name('cu
 /* REPORTES */
 Route::get('/reportes', [ReporteController::class, 'index'])->name("reportes.index");
 Route::get('/reportes/lista_alumnos_por_curso', [ReporteController::class, 'indexListaAlumnoPorCurso'])->name("reportes.index_lista_alumnos_por_curso");
-
-Route::get('/reportes', [ReporteController::class, 'index'])->name("reportes.index");
 Route::get('/reportes/lista_cursos_por_alumno', [ReporteController::class, 'indexListaCursoPorAlumno'])->name("reportes.index_lista_cursos_por_alumno");
-
-Route::get('/reportes', [ReporteController::class, 'index'])->name("reportes.index");
 Route::get('/reportes/lista_cursos_por_instructor', [ReporteController::class, 'indexListaCursoPorInstructor'])->name("reportes.index_lista_cursos_por_instructor");
+Route::get('/reportes/lista_cursos_con_sin_instructor', [ReporteController::class, 'indexListaCursoConSinInstructor'])->name("reportes.index_lista_cursos_con_sin_instructor");
 

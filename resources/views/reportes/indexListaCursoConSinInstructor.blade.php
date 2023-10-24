@@ -1,14 +1,14 @@
 @extends('layout')
 @section('content')
     <div>
-        <h4 class="mb-3">La lista de cursos por instructor</h4>
+        <h4 class="mb-3">La lista de cursos con o sin instructor</h4>
         <div class="card">
             <div class="card-header">
-                <form action="{{ route('reportes.index_lista_cursos_por_instructor') }}"> 
+                <form action="{{ route('reportes.index_lista_cursos_con_sin_instructor') }}"> 
                     <div class="row">
                         <div class="col-md-8">
                             <input type="text" name="filtro" class="form-control" 
-                                placeholder="Buscar por Nombres, Apellidos o DNI de Instructor:"
+                                placeholder="Buscar por Tipo de busqueda:"
                                 @if ($filtro) value="{{ $filtro }}" @endif>
                         </div>
                         <div class="col-md-4">

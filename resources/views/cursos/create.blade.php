@@ -1,22 +1,31 @@
 @extends('layout')
 @section('content')
-<div class="container">
-        <h2>Crear Curso</h2>
-        <form method="POST" action="{{ route('cursos.store') }}">
-            @csrf
-            <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" required>
+    <div>
+        <h4 class="mb-3">Crear nuevo curso</h4>
+        <div class="card">
+            <div class="card-body">
+                <form method="POST" action="{{ route('cursos.store') }}">
+                    @csrf
+                    <div class="form-group">
+                        <label class="form-label mt-3" for="nombre">Nombre : </label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su dni" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label mt-3" for="codigo">Codigo Unico : </label>
+                        <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Ingrese su codigo unico" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label mt-3" for="ciclo">Ciclo : </label>
+                        <input type="text" class="form-control" id="ciclo" name="ciclo" placeholder="Ingrese su ciclo" required>
+                    </div>
+                    <div class="form-group mt-3">
+                        <button type="submit" class="btn btn-primary w-100">Guardar</button>
+                    </div>
+                </form>
             </div>
-            <div class="form-group">
-                <label for="codigo">Codigo Unico</label>
-                <input type="text" class="form-control" id="codigo" name="codigo" required>
+            <div class="card-footer">
+                <a href="{{ route('cursos.index') }}" class="card-link">Volver a listado</a>
             </div>
-            <div class="form-group">
-                <label for="ciclo">Ciclo</label>
-                <input type="text" class="form-control" id="ciclo" name="ciclo" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Guardar</button>
-        </form>
+        </div>
     </div>
 @endsection

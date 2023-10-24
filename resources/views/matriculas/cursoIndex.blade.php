@@ -1,45 +1,67 @@
-<h1>CURSOS</h1>
-
-<form action="{{ route('matricula.curso.search') }}" method="post">
-    @csrf
-    <input type="text" name="codigo" id="codigo"
-        @if (isset($curso)) value="{{ $curso->codigo }}" @endif>
-    <button type="submit">Buscar Curso</button>
-</form>
-
-@isset($curso)
+@extends('layout')
+@section('content')
     <div>
-        Codigo: {{ $curso->codigo }}
-    </div>
-    <div>
-        Nombre: {{ $curso->nombre }}
-    </div>
-    <div>
-        Ciclo: {{ $curso->ciclo }}
-    </div>
-@endisset
+        <h5 class="mb-3">Buscar curso a matricular</h5>
+        <div class="card">
+            <div class="card-body">
+                <form action="{{ route('matricula.curso.search') }}" method="post">
+                    @csrf
+                    <div class="row">
+                        <div class="col-auto">
+                            <input type="text" name="codigo" id="codigo" class="form-control"
+                                placeholder="Codigo de curso"
+                                @if (isset($curso)) value="{{ $curso->codigo }}" @endif>
+                        </div>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary">Buscar Curso</button>
+                        </div>
+                    </div>
+                </form>
 
-@isset($curso)
-    <form action="{{ route('matricula.curso.matricular') }}" method="post">
+                @isset($curso)
+                    <div class="mt-3">
+                        <div>
+                            <label class="fw-bolder" style="width: 100px"> Codigo:</label> {{ $curso->codigo }}
+                        </div>
+                        <div>
+                            <label class="fw-bolder" style="width: 100px"> Nombre:</label> {{ $curso->nombre }}
+                        </div>
+                        <div>
+                            <label class="fw-bolder" style="width: 100px"> Ciclo:</label> {{ $curso->ciclo }}
+                        </div>
+                    </div>
 
-        <div>
-            Instructor:
-            <select name="idInstructor">
-                @foreach ($instructores as $instructor)
-                    <option value="{{ $instructor->id }}">{{ $instructor->nombres }} {{ $instructor->apellidos }}</option>
-                @endforeach
-            </select>
+                    <form action="{{ route('matricula.curso.matricular') }}" method="post">
+                        @csrf
+
+                        <div class="d-inline-flex">
+                            <label class="fw-bolder" style="width: 100px"> Instructor:</label>
+                            <select name="idInstructor" class="form-select form-select-sm w-auto">
+                                @foreach ($instructores as $instructor)
+                                    <option value="null">Sin instructor</option>
+                                    <option value="{{ $instructor->id }}">{{ $instructor->nombres }}
+                                        {{ $instructor->apellidos }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="mt-3">
+                            <button type="submit" class="btn btn-success px-5 ">Matricular</button>
+                        </div>
+                    </form>
+                @endisset
+
+                {{-- Manejo de mensajes de error --}}
+                @if (session('mensaje'))
+                    <p>{{ session('mensaje') }}</p>
+                @endif
+                @if (isset($mensaje))
+                    <p>{{ $mensaje }}</p>
+                @endif
+            </div>
+
+            <div class="card-footer">
+                <a href="{{ route('matricula.index') }}" class="card-link">Volver a matriculas</a>
+            </div>
         </div>
-
-        @csrf
-        <button type="submit">Matricular</button>
-    </form>
-@endisset
-
-{{-- Manejo de mensajes de error --}}
-@if (session('mensaje'))
-    <p>{{ session('mensaje') }}</p>
-@endif
-@if (isset($mensaje))
-    <p>{{ $mensaje }}</p>
-@endif
+    </div>
+@endsection
