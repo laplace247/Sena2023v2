@@ -2,7 +2,7 @@
 @section('content')
     <div>
         <h4 class="mb-3">Crear nuevo curso</h4>
-        <div class="card">
+        <div class="card w-100">
             <div class="card-body">
                 <form method="POST" action="{{ route('cursos.store') }}">
                     @csrf
