@@ -57,6 +57,21 @@ h1{
     text-align: center; 
 
 }
+
+.card-footer{
+    text-align: center;
+}
+.form-group{
+    text-align: left;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #04ff00;
+    text-shadow: 3px 3px 7px #000;
+}
+.mb-3{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #d9ff00;
+    text-shadow: 3px 3px 7px #000;
+}
 header{
     border: 2px solid red;
     font-size: large;
@@ -82,35 +97,3 @@ footer{
     color: #fff;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
-
-
-/* .container{
-    border: 5px solid red;
-    text-align: center;
-    background-color: #FFF0C9;
-    border-radius: 20px;
-    margin-left: 4px;
-    
-
-}
-.table{
-    border: 2px solid yellow;
-    text-align: center;
-    margin: 0 auto;
-}
-h2{
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background-color: aquamarine;
-    text-align: center;
-}
-th{
-    background-color: aqua;
-    text-align: center; 
-}
-
-.form-check-input{
-    text-align: center; 
-
-}
-
- */

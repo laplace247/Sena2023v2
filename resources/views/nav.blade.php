@@ -27,7 +27,7 @@
                 <strong>Bienvenido: {{ session('usuario_autenticado')['usuario'] }}</strong>
 
                 <form action="{{route('login.logout')}}" method="GET">
-                    <button class="btn btn-outline-secondary btn-sm w-100" type="submit">CERRAR SESIÓN</button>
+                    <button class="btn btn-danger btn-sm w-100" type="submit">CERRAR SESIÓN</button>
                 </form>
             </div>
         </div>

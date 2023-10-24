@@ -8,19 +8,19 @@
                     @csrf
                     <div class="form-group">
                         <label class="form-label mt-3" for="nombres">Dni : </label>
-                        <input type="text" class="form-control" id="dni" name="dni" placeholder="Ingrese su dni" required>
+                        <input type="text" class="form-control" id="dni" name="dni" placeholder="Ingrese el dni" required>
                     </div>
                     <div class="form-group">
                         <label class="form-label mt-3" for="nombres">Nombres : </label>
-                        <input type="text" class="form-control" id="nombres" name="nombres" placeholder="Ingrese sus nombres" required>
+                        <input type="text" class="form-control" id="nombres" name="nombres" placeholder="Ingrese los nombres" required>
                     </div>
                     <div class="form-group">
                         <label class="form-label mt-3" for="apellidos">Apellidos : </label>
-                        <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Ingrese sus apellidos" required>
+                        <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Ingrese los apellidos" required>
                     </div>
                     <div class="form-group">
                         <label class="form-label mt-3" for="edad">Edad : </label>
-                        <input type="text" class="form-control" id="edad" name="edad" placeholder="Ingrese su edad" required>
+                        <input type="text" class="form-control" id="edad" name="edad" placeholder="Ingrese la edad" required>
                     </div>
                     <div class="form-group mt-3">
                         <label class="form-label" for="genero">Género : </label>
@@ -36,7 +36,7 @@
                 </form>
             </div>
             <div class="card-footer">
-                <a href="{{ route('instructores.index') }}" class="card-link">Volver a listado</a>
+                <a href="{{ route('instructores.index') }}" class="btn btn-danger">Volver a listado</a>
             </div>
         </div>
     </div>

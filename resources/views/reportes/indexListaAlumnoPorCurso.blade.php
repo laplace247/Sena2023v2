@@ -23,7 +23,7 @@
                     <table class="table table-hover my-1">
                         <thead>
                             <tr>
-                                <th>#</th>
+                                <th> #</th>
                                 <th> Dni</th>
                                 <th> Nombre completo</th>
                                 <th> Curso</th>
@@ -48,7 +48,7 @@
                 </div>
             </div>
             <div class="card-footer">
-                <a href="{{ route('reportes.index') }}" class="card-link">Volver a Reportes</a>
+                <a href="{{ route('reportes.index') }}" class="btn btn-danger">Volver a Reportes</a>
             </div>
         </div>
     </div>

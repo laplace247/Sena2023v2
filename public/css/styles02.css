@@ -18,7 +18,16 @@
 .form-control{
     margin: 0;
 }
-
+.form-group{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #04ff00;
+    text-shadow: 3px 3px 7px #000;
+}
+h1{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #d9ff00;
+    text-shadow: 3px 3px 7px #000;
+}
 
 
 

@@ -8,15 +8,15 @@
                     @csrf
                     <div class="form-group">
                         <label class="form-label mt-3" for="nombre">Nombre : </label>
-                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su dni" required>
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese el nombre del curso" required>
                     </div>
                     <div class="form-group">
                         <label class="form-label mt-3" for="codigo">Codigo Unico : </label>
-                        <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Ingrese su codigo unico" required>
+                        <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Ingrese el codigo unico" required>
                     </div>
                     <div class="form-group">
                         <label class="form-label mt-3" for="ciclo">Ciclo : </label>
-                        <input type="text" class="form-control" id="ciclo" name="ciclo" placeholder="Ingrese su ciclo" required>
+                        <input type="text" class="form-control" id="ciclo" name="ciclo" placeholder="Ingrese el ciclo" required>
                     </div>
                     <div class="form-group mt-3">
                         <button type="submit" class="btn btn-primary w-100">Guardar</button>
@@ -24,7 +24,7 @@
                 </form>
             </div>
             <div class="card-footer">
-                <a href="{{ route('cursos.index') }}" class="card-link">Volver a listado</a>
+                <a href="{{ route('cursos.index') }}" class="btn btn-danger">Volver a listado</a>
             </div>
         </div>
     </div>

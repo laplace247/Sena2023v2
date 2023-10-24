@@ -60,7 +60,7 @@
             </div>
 
             <div class="card-footer">
-                <a href="{{ route('matricula.index') }}" class="card-link">Volver a matriculas</a>
+                <a href="{{ route('matricula.index') }}" class="btn btn-danger">Volver a matriculas</a>
             </div>
         </div>
     </div>

@@ -25,7 +25,7 @@
                 </form>
             </div>
             <div class="card-footer">
-                <a href="{{ route('cursos.index') }}" class="card-link">Volver a listado</a>
+                <a href="{{ route('cursos.index') }}" class="btn btn-danger">Volver a listado</a>
             </div>
         </div>
     </div>

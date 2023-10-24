@@ -1,57 +1,45 @@
 @extends('layout')
 @section('content')
-    <div>
-        <h4 class="mb-3">La lista de cursos con o sin instructor</h4>
-        <div class="card">
-            <div class="card-header">
-                <form action="{{ route('reportes.index_lista_cursos_con_sin_instructor') }}"> 
-                    <div class="row">
-                        <div class="col-md-8">
-                            <input type="text" name="filtro" class="form-control" 
-                                placeholder="Buscar por Tipo de busqueda:"
-                                @if ($filtro) value="{{ $filtro }}" @endif>
-                        </div>
-                        <div class="col-md-4">
-                            <button type="submit" class="btn btn-primary w-100">Buscar</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-
-            <div class="card-body">
-                <div class="card">
-                    <table class="table table-hover my-1">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th> Codigo</th>
-                                <th> Curso</th>
-                                <th> Ciclo</th>
-                                <th> Instructor</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @forelse ($cursos as $key => $curso)
-                                <tr>
-                                    <td>{{ $key + 1 }}</td>
-                                    <td>{{ $curso->codigo }}</td>
-                                    <td>{{ $curso->nombre }}</td>
-                                    <td>{{ $curso->ciclo }}</td>
-                                    <td>{{ $curso->instructor}}</td>
-                                </tr>
-                            @empty
-                                <tr>
-                                    <td colspan="5">No se encontro resultados</td>
-                                </tr>
-                            @endforelse
-                        </tbody>
-                    </table>
-                    <div class="p-2"> Total de resultados {{  count($cursos) }}</div>
-                </div>
-            </div>
-            <div class="card-footer">
-                <a href="{{ route('reportes.index') }}" class="card-link">Volver a Reportes</a>
-            </div>
+<div class="container">
+    <h2>La lista de cursos con o sin instructor</h2>
+    <form action="{{ route('reportes.index_lista_cursos_con_sin_instructor') }}" method="GET">
+        <div class="form-group">
+            <label for="filtro">Tipo de búsqueda:</label>
+            <select name="filtro" class="form-control">
+                <option value="null" disabled selected>Seleccione el tipo de busqueda</option>
+                <option value="1" @if ($filtro == '1') selected @endif>Con instructor</option>
+                <option value="2" @if ($filtro == '2') selected @endif>Sin instructor</option>
+            </select>
         </div>
-    <div>
+        <div class="form-group mt-3">
+            <button type="submit" class="btn btn-primary">Buscar</button>
+        </div>
+    </form>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Código</th>
+                <th>Curso</th>
+                <th>Ciclo</th>
+                <th>Instructor</th>
+            </tr>
+        </thead>
+        <tbody>
+            @forelse ($cursos as $key => $curso)
+            <tr>
+                <td>{{ $key + 1 }}</td>
+                <td>{{ $curso->codigo }}</td>
+                <td>{{ $curso->nombre }}</td>
+                <td>{{ $curso->ciclo }}</td>
+                <td>{{ $curso->instructor }}</td>
+            </tr>
+            @empty
+            <tr>
+                <td colspan="5">No se encontraron resultados</td>
+            </tr>
+            @endforelse
+        </tbody>
+    </table>
+</div>
 @endsection
