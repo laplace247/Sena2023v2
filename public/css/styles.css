@@ -32,6 +32,8 @@
     
 
 }
+
+
 .table{
     border: 2px solid yellow;
     text-align: center;
@@ -76,6 +78,7 @@ h1{
     color: #d9ff00;
     text-shadow: 3px 3px 7px #000;
 }
+
 header{
     border: 2px solid red;
     font-size: large;
@@ -94,6 +97,41 @@ strong{
     color: #04ff00;
     text-shadow: 3px 3px 7px #000;
 }
+.form-control {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #04ff00;
+    text-shadow: 3px 3px 7px #000;
+}
+.form-label {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #04ff00;
+    text-shadow: 3px 3px 7px #000;
+}
+/* Estilo para el texto en el botón "Guardar" */
+.btn-primary.w-100 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #d9ff00;
+    text-shadow: 3px 3px 7px #000;
+}
+/* Estilo para el texto en el botón "Agregar" */
+.btn-success.w-100 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #d9ff00;
+    text-shadow: 3px 3px 7px #000;
+}
+.btn-info.btn-sm {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 3px 3px 7px #000;
+}
+.btn-warning.btn-sm {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 3px 3px 7px #000;
+}
+.btn-danger.btn-sm {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 3px 3px 7px #000;
+}
+
 .fw-bolder{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #04ff00;
